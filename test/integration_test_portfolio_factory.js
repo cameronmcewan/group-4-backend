@@ -38,6 +38,8 @@ describe("Portfolio Factory Testing", function () {
     let portfolio = await attachPortfolio(portfolioFactory.portfolios(0));
     let supply = await portfolio.totalSupply.call();
     expect(parseInt(supply)).to.equal(0);
+    let returnedPortfolios = await portfolioFactory.getPortfolios.call();
+    expect(returnedPortfolios.length).to.equal(1);
   });
 
   it("has successfully deployed a second portfolio", async function () {
@@ -45,5 +47,7 @@ describe("Portfolio Factory Testing", function () {
     let portfolio2 = await attachPortfolio(portfolioFactory.portfolios(1));
     let supply = await portfolio2.totalSupply.call();
     expect(parseInt(supply)).to.equal(0);
+    let returnedPortfolios = await portfolioFactory.getPortfolios.call();
+    expect(returnedPortfolios.length).to.equal(2);
   });
 });
