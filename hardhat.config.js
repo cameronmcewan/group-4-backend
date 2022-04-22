@@ -1,4 +1,4 @@
-// require("@nomiclabs/hardhat-waffle");
+require("@nomiclabs/hardhat-waffle");
 require("dotenv").config();
 
 const RINKEBY_API_KEY = process.env.RINKEBY_API_KEY;
