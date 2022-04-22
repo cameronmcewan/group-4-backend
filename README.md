@@ -31,7 +31,7 @@ WALLET_PK="<wallet_private_key>"
 
 To run HardHat tests:
 
-npx hardhat test
++ npx hardhat test
 
 Testing:
 1. test/integration_test_portfolio_factory.js
