@@ -1,4 +1,5 @@
 const { expect } = require("chai");
+const { describe } = require("mocha");
 
 // Portfolio constructor arguments
 let _name = "Portfolio";
@@ -45,6 +46,24 @@ describe("DEPLOY", function () {
   it("Has a total supply of 0", async function () {
     let supply = await portfolio.totalSupply.call();
     expect(parseInt(supply)).to.equal(0);
+  });
+
+  describe("TEST: getTokenAddresses()", function () {
+    it("Returns the correct token addresses", async function () {
+      let returnedTokenAddresses = await portfolio.getTokenAddresses.call();
+      expect(returnedTokenAddresses).to.deep.equal(_tokenAddresses);
+    });
+  });
+
+  describe("TEST: getPercentageHoldings()", function () {
+    it("Returns the correct percentage holdings", async function () {
+      let returnedPercentageHoldings =
+        await portfolio.getPercentageHoldings.call();
+      returnedPercentageHoldings = returnedPercentageHoldings.map(
+        (bigNumberPercentageHolding) => bigNumberPercentageHolding.toNumber()
+      );
+      expect(returnedPercentageHoldings).to.deep.equal(_percentageHoldings);
+    });
   });
 
   describe("TEST: initialisePortfolio()", function () {
