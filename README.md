@@ -24,9 +24,9 @@ When you clone the repo, you will need to run `npm install` to get all of the sm
 You will also need to create a .env file and replace the following variables with your own:
 
 ```
-INFURA_API="https://rinkeby.infura.io/v3/<rinkeby_infura_api>"
-KOVAN_API="https://kovan.infura.io/v3/<kovan_infura_api>"
-WALLET_PK="<wallet_private_key>"
+RINKEBY_API_KEY="https://rinkeby.infura.io/v3/<rinkeby_infura_api>"
+KOVAN_API_KEY="https://kovan.infura.io/v3/<kovan_infura_api>"
+PRIVATE_KEY="<wallet_private_key>"
 ```
 
 To run HardHat tests, use:
