@@ -29,7 +29,7 @@ KOVAN_API="https://kovan.infura.io/v3/<kovan_infura_api>"
 WALLET_PK="<wallet_private_key>"
 ```
 
-To run HardHat tests:
+To run HardHat tests, use:
 
 + npx hardhat test
 
